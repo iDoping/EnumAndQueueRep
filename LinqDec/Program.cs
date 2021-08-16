@@ -35,15 +35,14 @@ namespace LinqDec
             }
 
             public T Current => _sourceE.Current;
-            
+
+            object IEnumerator.Current => _current;
+
             void IEnumerator.Reset()
             {
                 throw new NotSupportedException();
             }
-
-            object IEnumerator.Current => _current;
-
-
+         
             IEnumerator<T> IEnumerable<T>.GetEnumerator()
             {
                 return this;
@@ -55,7 +54,7 @@ namespace LinqDec
             }
         }
 
-        private class MyWhereEx<T> : IEnumerable<T>, IEnumerable, IEnumerator<T>, IEnumerator, IDisposable
+        private class MyWhereEx<T> : IEnumerable<T>, IEnumerator<T>, IDisposable
         {
             private Func<T, bool> _predicate;
             private T _current;
@@ -83,16 +82,10 @@ namespace LinqDec
                 return false;
             }
 
-            public T Current //по аналогии
-            {
-                get { return _current; }
-            }
+            public T Current => _sourceE.Current;
 
-            object IEnumerator.Current
-            {
-                get { return _current; }
-            }
-
+            object IEnumerator.Current => _current;
+           
             public void Dispose()
             {
             }
