@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NodeQueue.Tests", "NodeQueue.Tests\NodeQueue.Tests.csproj", "{22E306B3-D845-4CEC-8C36-FD4FC06DF122}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NodeQueue", "NodeQueue\NodeQueue.csproj", "{417A974D-D291-4893-BFFA-DBAB8CF822CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22E306B3-D845-4CEC-8C36-FD4FC06DF122}.Debug|x64.ActiveCfg = Debug|x64
+		{22E306B3-D845-4CEC-8C36-FD4FC06DF122}.Debug|x64.Build.0 = Debug|x64
+		{22E306B3-D845-4CEC-8C36-FD4FC06DF122}.Release|x64.ActiveCfg = Release|x64
+		{22E306B3-D845-4CEC-8C36-FD4FC06DF122}.Release|x64.Build.0 = Release|x64
+		{417A974D-D291-4893-BFFA-DBAB8CF822CD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{417A974D-D291-4893-BFFA-DBAB8CF822CD}.Debug|x64.Build.0 = Debug|Any CPU
+		{417A974D-D291-4893-BFFA-DBAB8CF822CD}.Release|x64.ActiveCfg = Release|Any CPU
+		{417A974D-D291-4893-BFFA-DBAB8CF822CD}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E89706D-4692-4DCB-9565-6860D30144CD}
+	EndGlobalSection
+EndGlobal
