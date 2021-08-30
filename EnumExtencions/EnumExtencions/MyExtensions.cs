@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace EnumExtencions
 {
+    /// <summary xml:lang="ru">
+    /// Представляет методы расширений по обработке последовательностей      
+    /// </summary>
     public static class MyExtensions
     {
         private class MyTakeEx<T> : IEnumerable<T>, IEnumerator<T>, IDisposable

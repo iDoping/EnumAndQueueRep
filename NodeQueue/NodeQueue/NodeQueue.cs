@@ -16,9 +16,6 @@ namespace NodeQueue
 
     /// <summary xml:lang="ru">
     /// Представляет коллекцию типа очередь, которая хранит элементы типа 
-    /// <typeparam 
-    /// name = "Node"> 
-    /// </typeparam>
     /// </summary>
     public class MyQueue<T> : IQueue<T>
     {
@@ -34,9 +31,6 @@ namespace NodeQueue
 
         /// <summary xml:lang="ru">
         /// Количество элементов в очереди     
-        /// <returns> 
-        /// Количество элементов в очереди 
-        /// </returns>
         /// </summary>
         public int Count { get { return _size; } }       
 
@@ -50,6 +44,9 @@ namespace NodeQueue
         /// </summary>
         /// <param xml:lang="ru" name="data"> 
         /// элемент, который необходимо добавить
+        /// <exception xml:lang="ru" сref="ArgumentNullException">
+        ///Если <paramref name="data"/> равен<see langword= "null" />.
+        ///</exception >
         /// </param>
         public void Enqueue(T data)
         {
@@ -68,7 +65,12 @@ namespace NodeQueue
 
         /// <summary xml:lang="ru">
         /// Возвращает элемент из очереди
-        /// <returns> Извлеченный объект из очереди </returns>
+        /// <returns> 
+        /// Извлеченный объект из очереди 
+        /// </returns>
+        /// <exception 
+        /// xml:lang="ru" сref="InvalidOperationException"> Если коллекция пуста 
+        /// </exception>
         /// </summary>
         public T Dequeue()
         {
@@ -173,7 +175,7 @@ namespace NodeQueue
             {
                 if (disposed)
                 {
-                    throw new ObjectDisposedException("Object Disposed");
+                    throw new ObjectDisposedException($"{GetType().Name} has been disposed.");
                 }
             }
         }
